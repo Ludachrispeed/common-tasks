@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var size = require('gulp-size');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
-var minifyCss = require('gulp-minify-css');
+var cleanCss = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 
@@ -23,7 +23,7 @@ gulp.task('styles:prod', ['styles:scss'], () => {
       showFiles: true,
       title: 'size of initial css'
     }))
-    .pipe(minifyCss({processImport: false}))
+    .pipe(cleanCss({processImport: false}))
     .pipe(size({
       showFiles: true,
       title: 'size of css after minify'
