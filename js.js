@@ -1,5 +1,3 @@
-'use strict';
-
 var gulp = require('gulp');
 var size = require('gulp-size');
 var concat = require('gulp-concat');
@@ -11,7 +9,7 @@ var mainBowerFiles = require('main-bower-files');
 /**
  * Include sourcemaps, no minification.
  */
-gulp.task('js:dev', function() {
+gulp.task('js:dev', () => {
   return gulp.src(['app/**/*.js', '!**/*_test.js', '!**/*_mocks.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
@@ -26,7 +24,7 @@ gulp.task('js:dev', function() {
 /**
  * Do minification, no sourcemaps.
  */
-gulp.task('js:prod', function() {
+gulp.task('js:prod', () => {
   gulp.src(['app/**/*.js', '!**/*_test.js', '!**/*_mocks.js'])
     .pipe(concat('app.js'))
     .pipe(size({
@@ -54,7 +52,7 @@ gulp.task('js:prod', function() {
  * vendor-provided minified version when NODE_ENV is set to "production". For example, see
  * https://github.com/Ludachrispeed/angular1-starter/blob/master/bower.json
  */
-gulp.task('js:bowerFiles', function() {
+gulp.task('js:bowerFiles', () => {
   gulp.src(mainBowerFiles())
     .pipe(size({
       showFiles: true,
@@ -68,6 +66,6 @@ gulp.task('js:bowerFiles', function() {
     }));
 });
 
-gulp.task('js:watch', function() {
+gulp.task('js:watch', () => {
   gulp.watch('app/**/*.js', ['js:dev']);
 });

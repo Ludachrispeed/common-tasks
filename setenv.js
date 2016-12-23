@@ -1,5 +1,3 @@
-'use strict';
-
 var gulp = require('gulp');
 
 /*
@@ -12,11 +10,11 @@ var gulp = require('gulp');
  */
 
 gulp.task('setenv:prod', function() {
-  console.log('\tsetting NODE_ENV to \'production\'');
+  console.log('\tsetting NODE_ENV to "production"');
   process.env.NODE_ENV = 'production';
 });
 
 gulp.task('setenv:dev', function() {
-  console.log('\tsetting NODE_ENV to \'development\'');
+  console.log('\tsetting NODE_ENV to "development"');
   process.env.NODE_ENV = 'development';
 });

@@ -1,8 +1,10 @@
-'use strict';
-
 var gulp = require('gulp');
 var del = require('del');
 
-gulp.task('clean', function(cb) {
-  del('dist/**/*', cb);
+gulp.task('clean', cb => {
+  del('dist/**')
+    .then(paths => {
+      console.log(`${paths.length} files deleted`);
+      cb();
+    });
 });

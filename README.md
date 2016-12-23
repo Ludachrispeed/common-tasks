@@ -1,9 +1,9 @@
-A collection of gulp tasks that I like to use in angularjs projects. This project is intended to be
-included in other projects as a git submodule.
+A collection of gulp tasks that I like to use in angularjs projects. This
+project is intended to be included in other projects as a git submodule.
 
-##How to include common-tasks in a project
+## How to include common-tasks in a project
 
-###Create the git submodule
+### Create the git submodule
 
     cd <project_root>
     mkdir gulp
@@ -13,10 +13,10 @@ included in other projects as a git submodule.
     git submodule init
     git submodule update
 
-###Create project-specif tasks
+### Create project-specif tasks
 
-If you have a project-specific gulp task called `special-task.js`, put it in the `gulp` directory as
-a sibling of the `common-tasks` directory:
+If you have a project-specific gulp task called `special-task.js`, put it in the
+`gulp` directory as a sibling of the `common-tasks` directory:
 
     app/
       +- styles/
@@ -31,10 +31,10 @@ a sibling of the `common-tasks` directory:
       +- css/
       +- index.html
 
-##How to Use
+## How to Use
 
 1. Run the asset pipeline
-  
+
   - *For development*: `gulp dev`
 
   - *For production* (includes minification): `gulp prod`
@@ -45,12 +45,12 @@ a sibling of the `common-tasks` directory:
 
   - *For production*: Copy the contents of `dist/` to your server
 
-##Assumptions
+## Assumptions
 
-###npm packages
+### npm packages
 
-It's assumed you have the following npm packages installed in your project using `npm install
---save-dev`
+It's assumed you have the following npm packages installed in your project using
+`npm install --save-dev`
 
     del                    gulp-size
     gulp                   gulp-sourcemaps
@@ -61,6 +61,6 @@ It's assumed you have the following npm packages installed in your project using
     gulp-plumber           require-dir
     gulp-sass              run-sequence
 
-#License
+# License
 
 MIT

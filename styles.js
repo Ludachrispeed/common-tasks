@@ -1,5 +1,3 @@
-'use strict';
-
 var gulp = require('gulp');
 var size = require('gulp-size');
 var sass = require('gulp-sass');
@@ -11,7 +9,7 @@ var autoprefixer = require('gulp-autoprefixer');
 /**
  * Copy app.css to dist/ without any minification
  */
-gulp.task('styles:dev', ['styles:scss'], function() {
+gulp.task('styles:dev', ['styles:scss'], () => {
   gulp.src('app/styles/app.css')
     .pipe(gulp.dest('dist/css/'));
 });
@@ -19,7 +17,7 @@ gulp.task('styles:dev', ['styles:scss'], function() {
 /**
  * Miniy app.css (which was created in the styles:scss task). Copy the result to dist/.
  */
-gulp.task('styles:prod', ['styles:scss'], function() {
+gulp.task('styles:prod', ['styles:scss'], () => {
   gulp.src('app/styles/app.css')
     .pipe(size({
       showFiles: true,
@@ -38,7 +36,7 @@ gulp.task('styles:prod', ['styles:scss'], function() {
  * paradigm) so that it will finish before "styles:dev" or "styles:prod" attempt to copy the
  * generated CSS.
  */
-gulp.task('styles:scss', function() {
+gulp.task('styles:scss', () => {
   return gulp.src('app/styles/app.scss')
     .pipe(size({
       showFiles: true,
@@ -63,6 +61,6 @@ gulp.task('styles:scss', function() {
 /**
  * Watch for changes to our SCSS files. If an SCSS file changes, run the 'styles:dev' task again.
  */
-gulp.task('styles:watch', function() {
+gulp.task('styles:watch', () => {
   gulp.watch('app/styles/**/*.scss', ['styles:dev']);
 });
