@@ -1,5 +1,5 @@
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
+const gulp = require('gulp');
+const runSequence = require('run-sequence');
 
 /**
  * Run the asset pipeline for development. This processes necessary files and copies them to the

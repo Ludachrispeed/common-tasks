@@ -1,5 +1,5 @@
-var gulp = require('gulp');
-var webserver = require('gulp-webserver');
+const gulp = require('gulp');
+const webserver = require('gulp-webserver');
 
 gulp.task('serve', ['html:watch', 'styles:watch', 'js:watch', 'images:watch'], () => {
   gulp.src('dist')

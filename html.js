@@ -1,5 +1,5 @@
-var gulp = require('gulp');
-var watch = require('gulp-watch');
+const gulp = require('gulp');
+const watch = require('gulp-watch');
 
 /**
  * Copy all HTML files into the dist/ directory. The file structure must be maintained in the copy.

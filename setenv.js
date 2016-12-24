@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+const gulp = require('gulp');
 
 /*
  * Set the NODE_ENV environment variable to 'development' or 'production'. This will only affect the

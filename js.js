@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var size = require('gulp-size');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var sourcemaps = require('gulp-sourcemaps');
-var ngAnnotate = require('gulp-ng-annotate');
-var mainBowerFiles = require('main-bower-files');
+const gulp = require('gulp');
+const size = require('gulp-size');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const sourcemaps = require('gulp-sourcemaps');
+const ngAnnotate = require('gulp-ng-annotate');
+const mainBowerFiles = require('main-bower-files');
 
 /**
  * Include sourcemaps, no minification.

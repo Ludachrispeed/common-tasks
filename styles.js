@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var size = require('gulp-size');
-var sass = require('gulp-sass');
-var plumber = require('gulp-plumber');
-var cleanCss = require('gulp-clean-css');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
+const gulp = require('gulp');
+const size = require('gulp-size');
+const sass = require('gulp-sass');
+const plumber = require('gulp-plumber');
+const cleanCss = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
 
 /**
  * Copy app.css to dist/ without any minification
