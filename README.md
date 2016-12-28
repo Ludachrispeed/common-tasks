@@ -60,6 +60,7 @@ It's assumed you have the following npm packages installed in your project using
     gulp-ng-annotate       main-bower-files
     gulp-plumber           require-dir
     gulp-sass              run-sequence
+    gulp-imagemin
 
 # License
 
